@@ -26,13 +26,13 @@ class UpcomingActivity : AppCompatActivity() {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upcoming)
-        var repo = EventRepository(service)
-        launch {
-            repo.getUpcomingEvent().observe(this@UpcomingActivity, Observer<List<Event>> {
-                Log.i("eee","e")
-                Toast.makeText(this@UpcomingActivity, it?.size.toString(), Toast.LENGTH_LONG).show()
-            })
-        }
+//        var repo = EventRepository(service)
+//        launch {
+//            repo.getUpcomingEvent().observe(this@UpcomingActivity, Observer<List<Event>> {
+//                Log.i("eee","e")
+//                Toast.makeText(this@UpcomingActivity, it?.size.toString(), Toast.LENGTH_LONG).show()
+//            })
+//        }
 
 
         val c = Calendar.getInstance()

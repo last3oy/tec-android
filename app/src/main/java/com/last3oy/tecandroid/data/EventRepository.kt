@@ -11,7 +11,7 @@ import javax.inject.Inject
 
 interface EventRepository {
 
-    suspend fun getUpcomingEvent() : MutableLiveData<List<Event>>
+    suspend fun getUpcomingEvent() : MutableLiveData<List<Event>>?
 
 
 //    private val mUpcomingEvent = MutableLiveData<List<Event>>()
