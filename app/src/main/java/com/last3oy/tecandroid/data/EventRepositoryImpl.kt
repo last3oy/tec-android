@@ -7,8 +7,8 @@ import javax.inject.Inject
 
 class EventRepositoryImpl @Inject constructor(service: ApiService) : EventRepository {
 
-    override suspend fun getUpcomingEvent(): MutableLiveData<List<Event>> {
-
+    override suspend fun getUpcomingEvent(): MutableLiveData<List<Event>>? {
+        return null
     }
 
 }
