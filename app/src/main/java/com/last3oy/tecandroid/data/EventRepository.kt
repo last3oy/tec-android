@@ -1,7 +1,7 @@
 package com.last3oy.tecandroid.data
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.last3oy.tecandroid.data.model.Event
 import kotlinx.coroutines.experimental.async
 import kotlinx.coroutines.experimental.launch

@@ -1,6 +1,6 @@
 package com.last3oy.tecandroid.data
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import com.last3oy.tecandroid.data.model.Event
 import javax.inject.Inject
 
