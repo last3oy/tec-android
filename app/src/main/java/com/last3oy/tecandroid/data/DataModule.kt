@@ -1,15 +1,14 @@
 package com.last3oy.tecandroid.data
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.experimental.CoroutineCallAdapterFactory
-import com.jakewharton.retrofit2.converter.kotlinx.serialization.stringBased
 import dagger.Module
 import dagger.Provides
-import kotlinx.serialization.json.JSON
 import okhttp3.MediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.logging.HttpLoggingInterceptor.Level.BODY
 import retrofit2.Retrofit
+import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
 @Module
@@ -29,11 +28,10 @@ class DataModule {
     @Provides
     fun provideRetrofit(baseUrl: String, client: OkHttpClient): Retrofit {
         val contentType = MediaType.parse("application/json")!!
-        val json = JSON.nonstrict
         return Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .client(client)
-                .addConverterFactory(stringBased(contentType, json::parse, json::stringify))
+                .addConverterFactory(MoshiConverterFactory.create())
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())
                 .build()
     }
