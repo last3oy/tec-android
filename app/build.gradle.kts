@@ -69,11 +69,10 @@ dependencies {
     kapt("com.squareup.moshi:moshi-kotlin-codegen:1.6.0")
 
     // dagger
-//    implementation("com.google.dagger:dagger:2.24")
-//    implementation("com.google.dagger:dagger-android-support:2.24")
-//
-//    kapt("com.google.dagger:dagger-compiler:2.16")
-//    kapt("com.google.dagger:dagger-android-processor:2.16")
+    implementation("com.google.dagger:dagger:2.24")
+    implementation("com.google.dagger:dagger-android-support:2.24")
+
+    kapt("com.google.dagger:dagger-android-processor:2.24")
 
     // picasso
     implementation("com.squareup.picasso:picasso:3.0.0-SNAPSHOT")

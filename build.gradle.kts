@@ -7,7 +7,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:3.6.0-beta01")
+        classpath("com.android.tools.build:gradle:4.1.3")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.50")
         classpath("org.jetbrains.kotlin:kotlin-serialization:1.3.50")
 
@@ -17,17 +17,7 @@ buildscript {
 }
 
 allprojects {
-    repositories {
-        maven {
-            setUrl("https://oss.sonatype.org/content/repositories/snapshots/")
-            content {
-                includeGroup("com.squareup.picasso")
-            }
-        }
-        google()
-        mavenCentral()
-        jcenter()
-    }
+    addRepositories(repositories)
 }
 
 task("clean") {
